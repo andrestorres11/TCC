@@ -1,0 +1,33 @@
+Alertas de entregas y novedades
+mar, 10 nov 2026
+
+Resumen:
+
+La reunión definió necesidades para automatizar el seguimiento de servicios de TCC.
+• 40 personas supervisan cerca de 800 vehículos.
+• El TMS conectado al GPS no confirma entregas sin registro del conductor.
+• Prioridad: detectar paradas sin entrega ni novedad reportada.
+• Cada detención georreferenciada debe asociarse con entrega o novedad.
+• WhatsApp a clientes se planteó, pero no como confirmación.
+
+
+Elementos de acción:
+
+* No se generaron puntos de acción
+
+
+Puntos clave de la discusión:
+
+Inicio de la entrevista
+Se resolvieron dificultades iniciales de audio y se dio comienzo a una entrevista para identificar las necesidades de la empresa. El equipo presentó la primera parte, centrada en comprender el negocio y el problema que se busca resolver.
+
+Operación y problemas de seguimiento
+TCC describió su actividad logística y la necesidad de alertas para gestionar incumplimientos en entregas y recogidas. Explicó que utiliza un TMS conectado al GPS, pero la supervisión manual de cientos de vehículos dificulta detectar servicios sin confirmación y puede generar fricción con los conductores.
+
+Alcance y validaciones de la aplicación
+Se priorizó detectar en tiempo real las paradas que carecen de confirmación de entrega o de un reporte de novedad, con seguimiento del operador de la torre de control. Se identificó como usuarios principales a controladores y transportadores, y se propuso validar cada detención georreferenciada con un registro de entrega o novedad; la conversación terminó tras una interrupción de conexión.
+
+
+Bloc de notas:
+
+* No hay notas

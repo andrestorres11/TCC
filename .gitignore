@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Variables de entorno (por si alguna queda en la raíz)
+.env
+.env.*
+!.env.example

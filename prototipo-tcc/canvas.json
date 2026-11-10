@@ -1,0 +1,32 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-11-10T00:00:00Z" },
+  "title": "TCC Torre de Control — Prototipo MVP",
+  "launch": { "view": "focused", "file": "Main.dc.html" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html":    { "x": 0,    "y": 0, "w": 390, "h": 844, "title": "1 · Iniciar sesión", "is_interactive": true, "radius": 32 },
+    "Dashboard.dc.html": { "x": 470,  "y": 0, "w": 390, "h": 844, "title": "2 · Dashboard (controlador)", "is_interactive": true, "radius": 32 },
+    "Parada.dc.html":   { "x": 940,  "y": 0, "w": 390, "h": 844, "title": "3 · Detalle de parada", "is_interactive": true, "radius": 32 },
+    "Admin.dc.html":    { "x": 1410, "y": 0, "w": 390, "h": 844, "title": "4 · Administración", "is_interactive": true, "radius": 32 }
+  },
+  "order": ["Main.dc.html", "Dashboard.dc.html", "Parada.dc.html", "Admin.dc.html"],
+  "notes": {
+    "titulo": {
+      "x": 0,
+      "y": -300,
+      "text": "TCC · Torre de Control — Prototipo MVP (móvil)",
+      "kind": "title1",
+      "maxW": 1800
+    },
+    "sub": {
+      "x": 0,
+      "y": -150,
+      "text": "Flujo navegable: toca \"Iniciar sesión\" para recorrer las 4 pantallas. Colores de estado — rojo: pendiente/alerta · verde: entregada · naranja: con novedad.",
+      "w": 760,
+      "size": "m",
+      "color": "blue"
+    }
+  },
+  "designSystems": []
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Detalle de parada · Torre de Control TCC</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+body { margin: 0; font-family: 'Inter', system-ui, sans-serif; }
+a { text-decoration: none; }
+.scroll::-webkit-scrollbar { width: 0; }
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F6F3; display: flex; flex-direction: column;">
+
+  <!-- Barra superior con volver -->
+  <div style="background: #141414; padding: 16px 16px; display: flex; align-items: center; gap: 12px; color: #fff; border-bottom: 4px solid #FFD100;">
+    <a href="Dashboard.dc.html" aria-label="Volver al panel" style="width: 38px; height: 38px; border-radius: 10px; background: #2B2B2B; display: flex; align-items: center; justify-content: center;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </a>
+    <div>
+      <div style="font-size: 10.5px; letter-spacing: 0.06em; color: #9A9A93; font-weight: 600;">PARADA #4821</div>
+      <div style="font-size: 17px; font-weight: 700;">Placa WGK-412</div>
+    </div>
+  </div>
+
+  <div class="scroll" style="flex: 1; overflow-y: auto; padding: 18px 20px 24px;">
+
+    <!-- Estado -->
+    <div style="display: flex; align-items: center; gap: 10px; background: #FDECEA; border: 1px solid #F6C9C4; border-radius: 14px; padding: 14px 16px;">
+      <span style="width: 12px; height: 12px; border-radius: 50%; background: #D81E05;"></span>
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: #991811;">Pendiente — sin entrega ni novedad</div>
+        <div style="font-size: 12.5px; color: #B01811; margin-top: 1px;">Alerta generada hace 48 minutos</div>
+      </div>
+    </div>
+
+    <!-- Datos de la parada -->
+    <div style="background: #fff; border: 1px solid #E6E3DC; border-radius: 16px; padding: 4px 18px; margin-top: 18px;">
+      <div style="display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid #F1EFE8;">
+        <span style="font-size: 13.5px; color: #6B6B64;">Conductor</span>
+        <span style="font-size: 13.5px; color: #1A1A1A; font-weight: 600;">Andrés Melo</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid #F1EFE8;">
+        <span style="font-size: 13.5px; color: #6B6B64;">Coordenadas</span>
+        <span style="font-size: 13.5px; color: #1A1A1A; font-weight: 600;">4.6512, −74.0932</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid #F1EFE8;">
+        <span style="font-size: 13.5px; color: #6B6B64;">Fuente GPS</span>
+        <span style="font-size: 13.5px; color: #1A1A1A; font-weight: 600;">Teléfono del conductor</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid #F1EFE8;">
+        <span style="font-size: 13.5px; color: #6B6B64;">Inicio de parada</span>
+        <span style="font-size: 13.5px; color: #1A1A1A; font-weight: 600;">10:14 a. m.</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding: 13px 0;">
+        <span style="font-size: 13.5px; color: #6B6B64;">Dirección</span>
+        <span style="font-size: 13.5px; color: #1A1A1A; font-weight: 600; text-align: right; max-width: 180px;">Cra. 13 #82-41, Bogotá</span>
+      </div>
+    </div>
+
+    <!-- Entrega / novedad asociada -->
+    <h2 style="margin: 22px 0 10px; font-size: 15px; font-weight: 700; color: #1A1A1A;">Registro del conductor</h2>
+    <div style="background: #fff; border: 1px dashed #D0CCC1; border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A958A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+      <p style="margin: 0; font-size: 13px; color: #6B6B64; line-height: 1.45;">No se recibió confirmación de entrega ni reporte de novedad desde la app del conductor.</p>
+    </div>
+
+    <!-- Resolución -->
+    <h2 style="margin: 22px 0 10px; font-size: 15px; font-weight: 700; color: #1A1A1A;">Resolver alerta</h2>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <button type="button" style="height: 50px; background: #15803D; color: #fff; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer;">Marcar como entregada</button>
+      <button type="button" style="height: 50px; background: #fff; color: #A8380A; border: 1px solid #EBC3A3; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer;">Registrar novedad</button>
+      <button type="button" style="height: 50px; background: #fff; color: #333330; border: 1px solid #D6D3CC; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer;">Asignar a un controlador</button>
+    </div>
+
+    <a href="Dashboard.dc.html" style="display: block; text-align: center; margin-top: 18px; color: #B91C13; font-size: 14px; font-weight: 600;">Volver al panel</a>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

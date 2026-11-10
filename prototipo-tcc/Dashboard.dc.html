@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dashboard · Torre de Control TCC</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+body { margin: 0; font-family: 'Inter', system-ui, sans-serif; }
+a { text-decoration: none; }
+.scroll::-webkit-scrollbar { width: 0; }
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F6F3; display: flex; flex-direction: column;">
+
+  <!-- Barra superior -->
+  <div style="background: #141414; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; color: #fff; border-bottom: 4px solid #FFD100;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="display: inline-flex; align-items: center; justify-content: center; background: #FFD100; color: #E2231A; font-weight: 800; font-size: 14px; letter-spacing: -0.03em; padding: 4px 9px; border-radius: 7px; border: 2px solid #141414; box-shadow: 0 0 0 1.5px #FFD100;">TCC</span>
+      <div>
+        <div style="font-size: 10.5px; letter-spacing: 0.06em; color: #9A9A93; font-weight: 600;">TORRE DE CONTROL</div>
+        <div style="font-size: 16px; font-weight: 700; margin-top: 1px;">Hola, Camila</div>
+      </div>
+    </div>
+    <div style="width: 40px; height: 40px; border-radius: 50%; background: #2B2B2B; border: 1.5px solid #FFD100; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">CR</div>
+  </div>
+
+  <!-- Contenido con scroll -->
+  <div class="scroll" style="flex: 1; overflow-y: auto; padding: 18px 20px 24px;">
+
+    <!-- KPIs -->
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">
+      <div style="background: #fff; border: 1px solid #E6E3DC; border-radius: 14px; padding: 14px 12px; border-top: 3px solid #D81E05;">
+        <div style="font-size: 26px; font-weight: 800; color: #C01A10; letter-spacing: -0.02em;">7</div>
+        <div style="font-size: 11.5px; color: #6B6B64; margin-top: 2px; line-height: 1.3;">Alertas abiertas</div>
+      </div>
+      <div style="background: #fff; border: 1px solid #E6E3DC; border-radius: 14px; padding: 14px 12px; border-top: 3px solid #D9480F;">
+        <div style="font-size: 26px; font-weight: 800; color: #B23A0B; letter-spacing: -0.02em;">23</div>
+        <div style="font-size: 11.5px; color: #6B6B64; margin-top: 2px; line-height: 1.3;">Paradas pendientes</div>
+      </div>
+      <div style="background: #fff; border: 1px solid #E6E3DC; border-radius: 14px; padding: 14px 12px; border-top: 3px solid #15803D;">
+        <div style="font-size: 26px; font-weight: 800; color: #15803D; letter-spacing: -0.02em;">148</div>
+        <div style="font-size: 11.5px; color: #6B6B64; margin-top: 2px; line-height: 1.3;">Entregas de hoy</div>
+      </div>
+    </div>
+
+    <!-- Filtros -->
+    <div style="display: flex; gap: 8px; margin-top: 18px; overflow-x: auto;">
+      <button type="button" style="flex-shrink: 0; background: #141414; color: #fff; border: none; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer;">Todos</button>
+      <button type="button" style="flex-shrink: 0; background: #fff; color: #4A4A45; border: 1px solid #D6D3CC; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer;">Vehículo</button>
+      <button type="button" style="flex-shrink: 0; background: #fff; color: #4A4A45; border: 1px solid #D6D3CC; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer;">Últimas 2 h</button>
+    </div>
+
+    <!-- Mapa -->
+    <div style="margin-top: 18px; border-radius: 16px; overflow: hidden; border: 1px solid #E6E3DC; position: relative; height: 180px; background: linear-gradient(135deg, #EEEBE3 0%, #E4E0D6 100%);">
+      <svg width="100%" height="100%" viewBox="0 0 350 180" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0;">
+        <g stroke="#D4CFC2" stroke-width="1">
+          <line x1="0" y1="45" x2="350" y2="45"/><line x1="0" y1="90" x2="350" y2="90"/><line x1="0" y1="135" x2="350" y2="135"/>
+          <line x1="90" y1="0" x2="90" y2="180"/><line x1="180" y1="0" x2="180" y2="180"/><line x1="270" y1="0" x2="270" y2="180"/>
+        </g>
+        <path d="M10 160 Q 120 120 180 70 T 340 20" stroke="#BDB7A8" stroke-width="3" fill="none"/>
+      </svg>
+      <span style="position: absolute; left: 60px; top: 110px; width: 16px; height: 16px; border-radius: 50%; background: #D81E05; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.3);"></span>
+      <span style="position: absolute; left: 150px; top: 60px; width: 16px; height: 16px; border-radius: 50%; background: #D81E05; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.3);"></span>
+      <span style="position: absolute; left: 230px; top: 100px; width: 16px; height: 16px; border-radius: 50%; background: #D9480F; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.3);"></span>
+      <span style="position: absolute; left: 290px; top: 50px; width: 16px; height: 16px; border-radius: 50%; background: #15803D; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.3);"></span>
+      <span style="position: absolute; left: 110px; top: 135px; width: 16px; height: 16px; border-radius: 50%; background: #15803D; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.3);"></span>
+      <div style="position: absolute; left: 10px; bottom: 10px; background: rgba(255,255,255,0.94); border-radius: 10px; padding: 7px 10px; display: flex; gap: 12px; font-size: 10.5px; color: #4A4A45;">
+        <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #D81E05;"></span>Pendiente</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #D9480F;"></span>Novedad</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 50%; background: #15803D;"></span>Entregada</span>
+      </div>
+    </div>
+
+    <!-- Lista de alertas -->
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 22px;">
+      <h2 style="margin: 0; font-size: 16px; font-weight: 700; color: #1A1A1A;">Alertas abiertas</h2>
+      <span style="font-size: 13px; color: #6B6B64;">7 sin resolver</span>
+    </div>
+
+    <!-- Alerta 1 -->
+    <a href="Parada.dc.html" style="display: block; background: #fff; border: 1px solid #E6E3DC; border-left: 4px solid #D81E05; border-radius: 14px; padding: 14px 16px; margin-top: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-size: 15px; font-weight: 700; color: #1A1A1A;">Placa WGK-412</div>
+        <span style="background: #FDECEA; color: #B01811; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 999px;">PENDIENTE</span>
+      </div>
+      <div style="font-size: 13px; color: #6B6B64; margin-top: 4px;">Parada sin confirmar · hace 48 min · Fuente: teléfono</div>
+      <div style="display: flex; gap: 8px; margin-top: 12px;">
+        <button type="button" style="flex: 1; background: #141414; color: #fff; border: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Confirmar</button>
+        <button type="button" style="flex: 1; background: #fff; color: #333330; border: 1px solid #D6D3CC; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Resolver</button>
+      </div>
+    </a>
+
+    <!-- Alerta 2 -->
+    <a href="Parada.dc.html" style="display: block; background: #fff; border: 1px solid #E6E3DC; border-left: 4px solid #D81E05; border-radius: 14px; padding: 14px 16px; margin-top: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-size: 15px; font-weight: 700; color: #1A1A1A;">Placa STB-089</div>
+        <span style="background: #FDECEA; color: #B01811; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 999px;">PENDIENTE</span>
+      </div>
+      <div style="font-size: 13px; color: #6B6B64; margin-top: 4px;">Parada sin confirmar · hace 1 h 12 min · Fuente: vehículo</div>
+      <div style="display: flex; gap: 8px; margin-top: 12px;">
+        <button type="button" style="flex: 1; background: #141414; color: #fff; border: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Confirmar</button>
+        <button type="button" style="flex: 1; background: #fff; color: #333330; border: 1px solid #D6D3CC; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Resolver</button>
+      </div>
+    </a>
+
+    <!-- Alerta 3 -->
+    <a href="Parada.dc.html" style="display: block; background: #fff; border: 1px solid #E6E3DC; border-left: 4px solid #D9480F; border-radius: 14px; padding: 14px 16px; margin-top: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-size: 15px; font-weight: 700; color: #1A1A1A;">Placa HJD-337</div>
+        <span style="background: #FDF0E7; color: #A8380A; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 999px;">NOVEDAD</span>
+      </div>
+      <div style="font-size: 13px; color: #6B6B64; margin-top: 4px;">Cliente ausente · hace 22 min · Fuente: teléfono</div>
+      <div style="display: flex; gap: 8px; margin-top: 12px;">
+        <button type="button" style="flex: 1; background: #141414; color: #fff; border: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Revisar</button>
+        <button type="button" style="flex: 1; background: #fff; color: #333330; border: 1px solid #D6D3CC; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Resolver</button>
+      </div>
+    </a>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
